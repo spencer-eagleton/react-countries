@@ -6,11 +6,13 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [query, setQuery] = useState('');
   const [continent, setContinent] = useState('All');
+  const [wait, setWait] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await getCountries();
       setCountries(data);
+      setWait(false);
     };
     fetchData();
   }, []);
@@ -22,6 +24,8 @@ function App() {
       );
     });
   }
+
+  if (wait) return <h1>please wait...</h1>;
 
   return (
     <div className="App">
