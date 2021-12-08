@@ -44,7 +44,7 @@ function App() {
         <option value="Africa">Africa</option>
         <option value="Asia">Asia</option>
         <option value="Oceania">Oceania</option>
-        <option value="Europe">Europe</option>
+        <option value="Europa">Europe</option>
       </select>
       {filterCountries().map((c) => {
         return (
